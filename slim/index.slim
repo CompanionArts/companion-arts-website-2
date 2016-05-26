@@ -9,25 +9,21 @@ html lang="en-us"
   meta name="google-site-verification" content="MwnM1OhJGiHqZCPZnnrD0Y25BsmMYOHa7ETPKuxr5sI" /
   meta name="author" content="Leland Hoover" /
   link href="favicon.ico" rel="shortcut icon" /
-  link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet" /
-  link href="http://www.w3schools.com/lib/w3-theme-grey.css" rel="stylesheet" /
+  link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet" type="text/css" /
+  link href="http://www.w3schools.com/lib/w3-theme-grey.css" rel="stylesheet" type="text/css" /
   link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" /
   link href="https://fonts.googleapis.com/css?family=Roboto|Cinzel" rel="stylesheet" type="text/css" /
   link href="css/main.css" rel="stylesheet" /
   body
     /! Google Tag Manager
-    /! noscript
+    noscript
       iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-4WKV" style="display:none;visibility:hidden" width="0"
-    / javascript:
-      | (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      | new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      | j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      | '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      | })(window,document,'script','dataLayer','GTM-4WKV'); /
+    javascript:
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-4WKV');
     /! End Google Tag Manager
     header
       /! Navbar
-      ul.w3-navbar.w3-theme.w3-top.w3-left-align.w3-large style="z-index:4;font-family:Cinzel;"
+      ul.w3-navbar.w3-theme.w3-top.w3-left-align.w3-large style="z-index:4;"
         li.w3-opennav.w3-right.w3-hide-large
           a.w3-hover-white.w3-large.w3-theme-l1 href="javascript:void(0)" onclick="w3_open()"
             i.fa.fa-bars
@@ -142,7 +138,7 @@ html lang="en-us"
             | CA Co-Founder Michael Stillwater, Desmond Tutu, and Jean Watson, PhD, RN.
           p
             em Care For The Journey
-            | audio tools are used by 100+ major healthcare institutions
+            audio tools are used by 100+ major healthcare institutions
             | throughout the country for training (see
             a href="#"  reviews
             | and
@@ -162,15 +158,15 @@ html lang="en-us"
             | Copyright © Companion Arts 2016. Companion Arts™ and Care for the Journey™ are trademarks of
             | Companion Arts.
           p Companion Arts is a 501(c)(3) nonprofit dedicated to helping family and professional caregivers.
-      /! END MAIN
+    /! END MAIN
+    /! Script to open and close the sidenav
     javascript:
-      /! Script to open and close the sidenav /
-      function w3_open() {
+      (function w3_open() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
         document.getElementsByClassName("w3-overlay")[0].style.display = "block";
-      }
-      function w3_closesli() {
+      })
+      (function w3_closesli() {
         document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
         document.getElementsByClassName("w3-overlay")[0].style.display = "none";
-      }
+      });
 
